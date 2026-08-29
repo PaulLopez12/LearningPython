@@ -1,0 +1,19 @@
+[project]
+name = "link-bio"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "PaulLopez12", email = "paul.lopez.b@uni.pe" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "reflex>=0.9.8",
+]
+
+[project.scripts]
+link-bio = "link_bio:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
