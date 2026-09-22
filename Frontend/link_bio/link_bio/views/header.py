@@ -6,7 +6,7 @@ from link_bio.styles.colors import TextColor as TextColor
 import link_bio.constants as const
 from link_bio.styles.colors import Color as Color
 
-def header() -> rx.Component:
+def header(details = True) -> rx.Component:
         return rx.vstack(
                 rx.hstack(
                         rx.avatar(name="Brais Moure", 
@@ -46,15 +46,22 @@ def header() -> rx.Component:
                         )
                 )
         ),
-                rx.flex(
-                        info_text("16+", "años de experiencia"),
-                        rx.spacer(),
-                        info_text("150+", "aplicaciones creadas"),
-                        rx.spacer(),
-                        info_text("3M+", "seguidores"),
-                        width="100%"
+                rx.cond(
+                        details,
+                        rx.vstack(
+                                rx.flex(
+                                        info_text("16+", "años de experiencia"),
+                                        rx.spacer(),
+                                        info_text("150+", "aplicaciones creadas"),
+                                        rx.spacer(),
+                                        info_text("3M+", "seguidores"),
+                                        width="100%",
                 ),
-                rx.text("Soy ingeniero de software y divulgador. Te enseño programación e inteligencia artificial desde cero. Aquí podrás encontrar todos mis enlaces de interés ¡Bienvenid@!", color = TextColor.BODY.value),
+                                rx.text("Soy ingeniero de software y divulgador. Te enseño programación e inteligencia artificial desde cero. Aquí podrás encontrar todos mis enlaces de interés ¡Bienvenid@!", color = TextColor.BODY.value),
+                                spacing="7"
+                        )
+                ),
+                width="100%",
                 spacing="7"
         )
 

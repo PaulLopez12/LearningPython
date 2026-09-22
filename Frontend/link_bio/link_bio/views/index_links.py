@@ -1,18 +1,19 @@
 import reflex as rx
 from link_bio.components.link_button import link_button
 from link_bio.components.tittle import tittle
+from link_bio.routes import Route
 import link_bio.constants as const
 from link_bio.components.link_sponsor import link_sponsor
 from link_bio.components.newsletter import newsletter
 from link_bio.styles.colors import Color as Color
 
-def links() -> rx.Component:
+def index_links() -> rx.Component:
     return rx.vstack(
         tittle("Comunidad"),
         link_button("Cursos gratis",
                     "Consulta mis tutoriales para aprender programación",
                     "/icons/code.svg", 
-                    const.MOUREDEV_CURSOS,
+                    Route.COURSES.value,
                     Color.YELLOW.value),
         
         link_button("Mi academia", 
