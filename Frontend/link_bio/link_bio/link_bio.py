@@ -1,10 +1,10 @@
 import reflex as rx
 from link_bio.components.navbar import navbar
-from link_bio.views.header.header import header
-from link_bio.views.links.links import links
+from link_bio.views.header import header
+from link_bio.views.links import links
 from link_bio.components.footer import footer
 import link_bio.styles.styles as styles
-from link_bio.views.sponsors.sponsors import sponsors
+from link_bio.views.sponsors import sponsors
 
 class State(rx.State):
     pass
@@ -42,4 +42,3 @@ app.add_page(
     description="Hola, mi nombre es Brais Moure. Soy ingeniero de software, desarrollador frelance full-stack y divulgador",
     image="logo_symbol.svg"
     )
-app._compile()
