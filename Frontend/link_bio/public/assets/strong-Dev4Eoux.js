@@ -1,0 +1,1 @@
+import{G as e,J as t}from"./components-DzQT6F3y.js";import{A as n,B as r,Y as i,k as a,w as o,z as s}from"./createLucideIcon-BGM9NMBI.js";var c=t(e()),l=t(r()),u={...s,...a,...n},d=c.forwardRef((e,t)=>{let{asChild:n,className:r,...a}=o(e,u),s=n?i:`strong`;return c.createElement(s,{...a,ref:t,className:(0,l.default)(`rt-Strong`,r)})});d.displayName=`Strong`;export{d as t};
