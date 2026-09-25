@@ -1,4 +1,4 @@
-cd link_bio
+cd Frontend/link_bio
 python -m venv .venv
 . .venv/bin/activate
 pip install --upgrade pip
