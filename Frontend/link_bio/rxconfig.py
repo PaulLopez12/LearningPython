@@ -5,7 +5,7 @@ config = rx.Config(
     cors_allowed_origins=[
         "http://localhost:3000",
         "https://moure.dev",
-        "https://primera-web-python-cunxzigxd-zw-arking-z.vercel.app/"
+        "https://primera-web-python.vercel.app",
     ],
     plugins=[
         rx.plugins.SitemapPlugin(),
