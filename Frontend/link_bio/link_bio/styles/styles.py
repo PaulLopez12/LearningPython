@@ -12,6 +12,7 @@ MAX_WIDTH = "600px"
 STYLESHEETS = [
     "https://fonts.googleapis.com/css?family=Poppins:wght@300;500&display=swap",
     "https://fonts.googleapis.com/css?family=Comfortaa:wght@500&display=swap",
+    "https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Space+Grotesk:wght@300..700&display=swap"
 ]
 
 class Size(Enum):
@@ -41,6 +42,7 @@ BASE_STYLE = {
         "padding" : Size.SMALL.value,
         "border_radius" : Size.DEFAULT.value,
         "color" : TextColor.HEADER.value,
+        "font_family" : Font.LOGO.value,
         "background_color" : Color.CONTENT.value,
         "cursor" : "pointer",
         "transition": "transform 0.05s ease",

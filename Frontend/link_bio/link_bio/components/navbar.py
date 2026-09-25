@@ -3,6 +3,7 @@ import link_bio.styles.styles as styles
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.colors import Color as Color
 import link_bio.constants as const
+from link_bio.components.ant_components import float_button
 
 def navbar() -> rx.Component:
     return rx.hstack(
@@ -15,6 +16,9 @@ def navbar() -> rx.Component:
                 alt="Mouredev logo"),
             href=const.MOUREDEV_URL
             ),
+        float_button(
+            icon = rx.image(src= "/icons/donate.svg"),
+            href = const.COFFEE_URL),
         position="sticky",
         bg=Color.DARK.value,
         padding_x=styles.Size.BIG.value,

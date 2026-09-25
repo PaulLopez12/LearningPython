@@ -21,7 +21,7 @@ def courses() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
-                header(),
+                header(details=False),
                 courses_links(),
                 sponsors(),
                 max_width = styles.MAX_WIDTH,
