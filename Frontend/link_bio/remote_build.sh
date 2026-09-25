@@ -1,6 +1,6 @@
 cd link_bio
 python -m venv .venv
-. .venv/Scripts/activate
+. .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 rm -rf public
