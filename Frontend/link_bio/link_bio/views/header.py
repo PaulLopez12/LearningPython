@@ -6,10 +6,11 @@ from link_bio.styles.colors import TextColor as TextColor
 import link_bio.constants as const
 from link_bio.styles.colors import Color as Color
 
-def header(details = True) -> rx.Component:
+def header(details = True, live= False) -> rx.Component:
         return rx.vstack(
                 rx.hstack(
-                        rx.avatar(name="Brais Moure", 
+                        rx.avatar(
+                                name="Brais Moure", 
                                 size="7", 
                                 src = "avatar.webp",
                                 color = TextColor.BODY.value,
@@ -18,6 +19,18 @@ def header(details = True) -> rx.Component:
                                 border = "4px",
                                 border_color = Color.PRIMARY.value,
                                 style=styles.image_style),
+                        rx.cond(
+                                live,
+                                rx.box(
+                                        width="12px",
+                                        height="12px",
+                                        background_color=styles.Color.PURPLE.value,
+                                        border_radius="50%",
+                                        position="relative",
+                                        top="95px",
+                                        right="18px",        
+                                        ),
+                                ),
                 rx.vstack(
                         rx.text("Brais Moure", size="5", trim="end"),
                         rx.text("@mouredev", trim="start", color=TextColor.BODY.value),
