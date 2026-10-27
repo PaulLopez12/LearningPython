@@ -12,7 +12,8 @@ MAX_WIDTH = "600px"
 STYLESHEETS = [
     "https://fonts.googleapis.com/css?family=Poppins:wght@300;500&display=swap",
     "https://fonts.googleapis.com/css?family=Comfortaa:wght@500&display=swap",
-    "https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Space+Grotesk:wght@300..700&display=swap"
+    "https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Space+Grotesk:wght@300..700&display=swap",
+    "/css/styles.css"
 ]
 
 class Size(Enum):
@@ -22,6 +23,17 @@ class Size(Enum):
     LARGE = "1.5em"
     BIG = "2em"
     VERYBIG = "4em"
+
+class Spacing(Enum):
+    ZERO = "0"
+    VERY_SMALL = "1"
+    MEDIUM_SMALL = "2"
+    SMALL = "3"
+    DEFAULT = "4"
+    LARGE = "5"
+    BIG = "6"
+    MEDIUM_BIG = "7"
+    VERY_BIG = "9"
 
 # Styles
 BASE_STYLE = {

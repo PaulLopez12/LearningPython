@@ -7,7 +7,7 @@ from link_bio.components.link_sponsor import link_sponsor
 from link_bio.components.newsletter import newsletter
 from link_bio.styles.colors import Color as Color
 
-def index_links() -> rx.Component:
+def index_links(featured = []) -> rx.Component:
     return rx.vstack(
         tittle("Comunidad"),
         link_button("Cursos gratis",
@@ -47,15 +47,7 @@ def index_links() -> rx.Component:
         newsletter(),
         rx.spacer(),
         
-        tittle("Destacado"),    
-        rx.hstack(
-            link_sponsor("js_highlighted.png",
-                        const.JS_COURSE_URL,
-                        "Curso de Javascript"),
-            link_sponsor("python_highlighted.png",
-                        const.PYTHON_COURSE_URL,
-                        "Curso de Python")
-        ),
+
         rx.spacer(),
         
         tittle("Recursos y más"),

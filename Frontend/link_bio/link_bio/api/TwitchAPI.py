@@ -36,7 +36,7 @@ class TwitchApi:
     def token_valid(self) -> bool:
         return time.time() < self.token_expires
     
-    def live(self, user:str) -> bool:
+    def live(self, user:str) -> dict:
         if not self.token_valid():
             self.generate_token()
             
@@ -50,5 +50,5 @@ class TwitchApi:
         
         if response.status_code == 200 and response.json()["data"]:
             data = response.json()["data"]
-            return True
-        return False
+            return {"live" : True, "title" : data[0]["title"]}
+        return {"live" : False, "title" : ""}

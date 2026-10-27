@@ -12,6 +12,7 @@ dependencies = [
     "python-dotenv>=1.2.3",
     "reflex>=0.9.8",
     "requests>=2.34.2",
+    "supabase>=2.33.0",
 ]
 
 [project.scripts]
